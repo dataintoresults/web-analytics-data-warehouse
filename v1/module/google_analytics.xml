@@ -1,0 +1,8 @@
+<module name="google_analytics" datastore="dw">
+  <table name="sessions" strategy="overwrite" businessKeys="date,medium,source,campaign,country,page">
+    <source type="datastore" datastore="google_analytics" table="sessions"/>
+  </table>
+  <table name="events" strategy="overwrite" businessKeys="date,medium,source,campaign,country,page,category,action,label">
+    <source type="datastore" datastore="google_analytics" table="events"/>
+  </table>
+</module>

@@ -1,0 +1,20 @@
+
+<datastore name="google_sheets" type="googleSheets">
+  <table name="seo_pages" 
+    sheet="DATA - Pages" 
+    colStart="A" rowStart="10">
+    <source type="datastoreQuery" datastore="dw" contentPath="google_sheets/seo_pages.sql"/>
+  </table>
+
+  <table name="users_medium" 
+    sheet="DATA - Users medium" 
+    colStart="A" rowStart="2">
+    <source type="datastoreQuery" datastore="dw" contentPath="google_sheets/users_medium.sql"/>
+  </table>
+
+  <table name="users_country"
+    sheet="DATA - Users country" 
+    colStart="A" rowStart="2">
+    <source type="datastoreQuery" datastore="dw" contentPath="google_sheets/users_country.sql"/>
+  </table>
+</datastore>

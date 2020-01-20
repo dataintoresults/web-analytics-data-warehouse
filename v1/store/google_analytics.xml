@@ -1,0 +1,35 @@
+
+<datastore name="google_analytics"  type="googleAnalytics">
+  <table name="sessions" startDate="10daysAgo" endDate="today">
+    <column name="date" type="varchar" gaName="ga:date" gaType="dimension"/>    
+    <column name="medium" type="varchar" gaName="ga:medium" gaType="dimension"/>    
+    <column name="source" type="varchar" gaName="ga:source" gaType="dimension"/>  
+    <column name="campaign" type="varchar" gaName="ga:campaign" gaType="dimension"/>
+    <column name="country" type="varchar" gaName="ga:country" gaType="dimension"/>
+    <column name="page" type="varchar" gaName="ga:pagePath" gaType="dimension"/>
+
+    <column name="users" type="bigint" gaName="ga:users" gaType="measure"/>
+    <column name="new_users" type="bigint" gaName="ga:newUsers" gaType="measure"/>
+    <column name="bounces" type="bigint" gaName="ga:bounces" gaType="measure"/>
+    <column name="pageviews" type="bigint" gaName="ga:pageviews" gaType="measure"/>
+    <column name="unique_pageviews" type="bigint" gaName="ga:uniquePageviews" gaType="measure"/>
+  </table>
+
+  <table name="events" startDate="10daysAgo" endDate="today">
+    <column name="date" type="varchar" gaName="ga:date" gaType="dimension"/>
+    <column name="medium" type="varchar" gaName="ga:medium" gaType="dimension"/>
+    <column name="source" type="varchar" gaName="ga:source" gaType="dimension"/>
+    <column name="campaign" type="varchar" gaName="ga:campaign" gaType="dimension"/>
+    <column name="country" type="varchar" gaName="ga:country" gaType="dimension"/>
+    <column name="page" type="varchar" gaName="ga:pagePath" gaType="dimension"/>
+    <column name="category" type="varchar" gaName="ga:eventCategory" gaType="dimension"/>
+    <column name="action" type="varchar" gaName="ga:eventAction" gaType="dimension"/>
+    <column name="label" type="varchar" gaName="ga:eventLabel" gaType="dimension"/>
+
+    <column name="total_events" type="bigint" gaName="ga:totalEvents" gaType="measure"/>
+    <column name="unique_events" type="bigint" gaName="ga:uniqueEvents" gaType="measure"/>
+    <column name="event_value" type="numeric" gaName="ga:eventValue" gaType="measure"/>
+    <column name="avg_event_value" type="numeric" gaName="ga:avgEventValue" gaType="measure"/>
+    <column name="sessions_with_event" type="bigint" gaName="ga:sessionsWithEvent" gaType="measure"/>
+  </table>
+</datastore>

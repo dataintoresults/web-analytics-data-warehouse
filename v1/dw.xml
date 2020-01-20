@@ -1,0 +1,20 @@
+<datawarehouse>
+  <datastore name="dw" type="postgresql"/>
+
+  <include path="store/google_analytics.xml"/>
+  <include path="store/google_search.xml"/>
+  <include path="store/google_sheets.xml"/>
+
+
+  <include path="module/google_analytics.xml"/>
+  <include path="module/google_search.xml"/>
+
+  <include path="module/content_marketing.xml"/>
+
+  <process name="update">
+    <task module="google_analytics"/>
+    <task module="google_search"/>
+    <task module="content_marketing"/>
+    <task datastore="google_sheets"/>
+  </process>
+</datawarehouse>

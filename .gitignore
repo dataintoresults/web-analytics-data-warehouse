@@ -1,0 +1,4 @@
+
+# Don't store in git sensitive informations
+secret.conf
+*.p12

@@ -1,0 +1,5 @@
+<module name="google_search" datastore="dw">
+  <table name="seo_pages" strategy="overwrite" businessKeys="date,page">
+    <source type="datastore" datastore="google_search" table="seo_pages"/>
+  </table>
+</module>

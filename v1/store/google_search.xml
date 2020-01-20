@@ -1,0 +1,10 @@
+<datastore name="google_search" type="googleSearch">
+  <table name="seo_pages" startDate="10daysAgo" endDate="1daysAgo">
+    <column name="date" type="text" gsName="date"/>
+    <column name="page" type="text" gsName="page"/>
+
+    <column name="impressions" type="int" gsName="impressions"/>
+    <column name="clicks" type="int" gsName="clicks"/>
+    <column name="position" type="double" gsName="position"/>
+  </table>
+</datastore>
