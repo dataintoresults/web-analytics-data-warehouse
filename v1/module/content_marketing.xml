@@ -1,4 +1,7 @@
 <module name="content_marketing" datastore="dw">
+  <table name="read_ratio">
+    <source type="query" contentPath="content_marketing/read_ratio.sql"/>
+  </table>
   <table name="stats_pages">
     <source type="query" contentPath="content_marketing/stats_pages.sql"/>
   </table>
