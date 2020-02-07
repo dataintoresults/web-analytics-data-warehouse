@@ -36,3 +36,5 @@ from start_of_page_events
 -- It's a left join because some articles are started
 -- but were never read up to the 75% mark.
 left join end_of_page_events using (page)
+-- Avoid division by 0
+where start_count <> 0
